@@ -1,0 +1,32 @@
+sudo cp -P cuda/include/cudnn.h /usr/local/cuda/include
+sudo cp -P cuda/lib64/libcudnn* /usr/local/cuda/lib64
+sudo chmod a+r /usr/local/cuda/include/cudnn.h /usr/local/cuda/lib64/libcudnn*
+
+# check version
+cat /usr/local/cuda/include/cudnn.h | grep CUDNN_MAJOR -A 2
+nvcc --version
+cat /proc/driver/nvidia/version
+
+# zip
+zip -r <filename.zip> file1 dir1
+
+# unzip
+#-q = quite
+unzip -q <filename.zip> -d <dir_to_unzip>
+
+# install java
+install default-jre
+
+# install matlab on docker:
+The option "javadir" was the right way to investigate!
+./install -javadir /usr/lib/jvm/java-7-openjdk/jre/
+
+#Display Information of /home File System
+df -hT /home
+
+# Make .Xauthority
+$xauth
+$xauth>quit
+or $touch ~/.Xauthority
+$chown <group>:<user> .Xauthority
+notice: create .Xauthority for root if use sudo
