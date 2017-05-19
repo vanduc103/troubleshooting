@@ -24,9 +24,6 @@ The option "javadir" was the right way to investigate!
 #Display Information of /home File System
 df -hT /home
 
-# find a string in all files
-grep -r /path/to/folder -e "string_to_find"
-
 # Make .Xauthority
 $xauth
 $xauth>quit

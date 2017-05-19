@@ -1,0 +1,5 @@
+- If you install new nvidia-driver => need to restart nvidia-docker service and nvidia-docker-plugin
+- Check volume for new driver to make sure all libraries of new driver were copied to volume: default "/var/lib/nvidia-docker/volumes"
+- Do not manually create new volume, create by command: docker volume create --name=nvidia_driver_367.57 -d nvidia-docker 
+=> check in /var/lib/nvidia-docker/volumes/nvidia_driver/367.57 has many nvidia libs ?
+- Use (sudo) docker volume list / prune (remove all unused volumes) / rm (remove 1 volume)
